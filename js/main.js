@@ -13,7 +13,7 @@ async function round(){
     temp = Math.floor(temp);
     arr.push(temp);
   }
-  test.innerHTML = arr;
+ // test.innerHTML = arr;
   for(let e = 0; e < i; e++){
     test.classList.add("tst");
     await sleep(1000);
