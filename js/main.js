@@ -4,10 +4,10 @@ test = document.querySelector(".test");
 over = document.querySelector(".over")
 let arr = [];
 let i = 1;
+test.classList.add("tst");
 async function round(){
   start.classList.add("disable");
   arr = [];
-  test.classList.add("tst");
   for(let e = 0; e < i; e++){
     let temp = Math.random() * 4;
     temp = Math.floor(temp);
@@ -15,6 +15,7 @@ async function round(){
   }
   test.innerHTML = arr;
   for(let e = 0; e < i; e++){
+    test.classList.add("tst");
     await sleep(1000);
     btn[arr[e]].classList.add("bigborder");
     await sleep(1000);
@@ -32,7 +33,7 @@ for(let b = 0; b < 4; b++){
     else if(arr.length === 0){i++; round();}
   })
 }
-over.addEventListener("click",() => {over.classList.add("disable"); start.classList.remove("disable");})
+over.addEventListener("click",() => {over.classList.add("disable"); start.classList.remove("disable");location.reload();})
 
 
 
